@@ -1,0 +1,8 @@
+[packages]
+torch = "==1.8.1"
+
+[dev-packages]
+pytest = "==6.2.3"
+
+[requires]
+python_version = "3.9.4"
