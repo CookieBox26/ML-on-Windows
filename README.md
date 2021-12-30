@@ -2,5 +2,5 @@
 
 ```
 pipenv install -d
-pipenv run pytest
+pipenv run pytest -rpfs
 ```
