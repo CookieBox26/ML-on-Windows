@@ -3,7 +3,7 @@ import torch.nn as nn
 from math import sqrt
 
 
-class TestTorch:
+class TestTorchTensorMaskedFill:
 
     def test_masked_fill_(self):
         # 以下のセルフアテンションをマスクする．

@@ -1,7 +1,7 @@
 import torch
 
 
-class TestTorch:
+class TestTorchEinsum:
 
     def test_einsum(self):
         """ torch.einsum の結果を確認する．

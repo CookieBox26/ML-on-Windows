@@ -1,6 +1,7 @@
 [packages]
 numpy = "==1.21.5"
 torch = "==1.10.1"
+scikit-learn = "==1.0.2"
 
 [dev-packages]
 pytest = "==6.2.3"

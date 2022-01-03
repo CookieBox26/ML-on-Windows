@@ -1,7 +1,7 @@
 import torch
 
 
-class TestTorch:
+class TestTorchUnsqueeze:
 
     def test_unsqueeze(self):
         """ torch.unsqueeze の使い方を確認する．

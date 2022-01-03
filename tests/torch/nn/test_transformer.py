@@ -1,7 +1,7 @@
 import torch.nn as nn
 
 
-class TestTransformer:
+class TestTorchNnTransformer:
 
     def test_init(self):
         model = nn.Transformer()
