@@ -66,9 +66,9 @@ class TestTorchUnsqueeze:
         n_top = 3
         M = q_k_sample.max(-1)[0] - torch.div(q_k_sample.sum(-1), L_K)
         assert M.shape == torch.Size([5])
-        M_top = M.topk(n_top, sorted=False)[1]  # 値とインデックスのタプルなので [1] でインデックスをとる．
+        M_top = M.topk(n_top, sorted=True)[1]  # 値とインデックスのタプルなので [1] でインデックスをとる．
         assert M_top.shape == torch.Size([3])
-        assert torch.all(torch.eq(M_top, torch.tensor([4, 1, 0])))
+        assert torch.all(torch.eq(M_top, torch.tensor([1, 4, 0])))
 
         q_reduce = q[torch.arange(B)[:, None, None], torch.arange(H)[None, :, None], M_top, :]
         assert q_reduce.shape == torch.Size([1, 1, 3, 4])
@@ -96,8 +96,8 @@ class TestTorchUnsqueeze:
         assert torch.all(torch.eq(
             mask,
             torch.tensor([[
-                [False, False, False, False, False],
                 [False, False, True, True, True],
+                [False, False, False, False, False],
                 [False, True, True, True, True],
             ]])
         ))

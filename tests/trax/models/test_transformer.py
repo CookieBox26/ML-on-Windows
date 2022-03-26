@@ -1,5 +1,6 @@
-import trax
+# import trax
 
+'''
 class TestTraxModelsTransformer:
 
     def test_init(self):
@@ -13,3 +14,4 @@ class TestTraxModelsTransformer:
             max_len=2048,
             mode='predict'
         )
+'''
